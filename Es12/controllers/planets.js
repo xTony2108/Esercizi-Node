@@ -1,5 +1,3 @@
-const express = require("express");
-
 const Joi = require("joi");
 
 let planets = require("../db");
