@@ -1,8 +1,12 @@
 const fs = require("fs/promises");
+const fs2 = require("fs");
+
+/**
+ * Con promise
+ */
 
 const writeFile = async () => {
-  const data =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+  const data = "Questo è il contenuto del file 1";
   try {
     await fs.writeFile("file.txt", data);
     console.log("File creato con successo");
@@ -11,4 +15,17 @@ const writeFile = async () => {
   }
 };
 
+/**
+ * Senza promise
+ */
+
+const writeFile2 = () => {
+  const data = "Questo è il contenuto del file 2";
+  fs2.writeFile("file2.txt", data, (error) => {
+    if (error) console.error(error);
+    else console.log("File creato con successo");
+  });
+};
+
 writeFile();
+writeFile2();
