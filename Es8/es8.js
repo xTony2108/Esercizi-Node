@@ -21,7 +21,5 @@ luckyDraw("Joe")
     console.log(value);
     return luckyDraw("Sabrina");
   })
-  .then((value) => {
-    console.log(value);
-  })
+  .then((value) => console.log(value))
   .catch((error) => console.log(error));
