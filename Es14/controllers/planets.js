@@ -121,6 +121,8 @@ const deleteById = async (req, res) => {
 
 // const upload = multer({ storage });
 
+// app.post("/:id/image", upload.single("image"), updateImage);
+
 const updateImage = async (req, res) => {
   const { path } = req.file;
   const { id } = req.params;
