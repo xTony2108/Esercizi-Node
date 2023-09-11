@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "nodemon ./Es16/index.js"
+    "dev": "nodemon ./Es17/index.js"
   },
   "author": "",
   "license": "ISC",
